@@ -71,7 +71,7 @@ def del_estudante(codigo):
             del database[index]
             if save_data(database, 'estudantes'):
                 return jsonify(estudante)
-        return 'Erro ao excluir o estudante'
+        return 'Erro ao excluir o estudante!'
 
 
 # Editar estudante
@@ -84,6 +84,7 @@ def update_estudante(codigo):
             database[index].update(updated_estudante)
             save_data(database, 'estudantes')
             return jsonify(database[index])
+    return 'Estudante não encontrado!'
 
 
 # port 500 is already used in macOS

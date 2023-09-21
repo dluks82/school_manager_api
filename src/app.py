@@ -31,5 +31,11 @@ def root():
     return 'Hello from School Manager!'
 
 
+@app.route('/estudantes', methods=['GET'])
+def get_estudantes():
+    data = load_data('estudantes')
+    return jsonify(data)
+
+
 # port 500 is already used in macOS
 app.run(host='localhost', port=5001, debug=True)

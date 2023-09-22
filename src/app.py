@@ -13,7 +13,7 @@ ESTRUTURA = {
         'nome': str,
         'cpf': str
     },
-    'turmas': {
+    'disciplinas': {
         'codigo': int,
         'nome': str
     },

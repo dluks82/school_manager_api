@@ -300,6 +300,13 @@ def delete_professor(codigo):
     return excluir('professores', codigo)
 
 
+# Editar professor
+@app.route('/professor/<int:codigo>', methods=['PUT', 'PATCH'])
+def update_professor(codigo):
+    new_professor = request.get_json()
+    return jsonify(editar('professores', codigo, new_professor))
+
+
 # Disciplinas
 
 # Obter todos os disciplinas
